@@ -39,7 +39,7 @@ int main(int argc, char *argv[])
             array[j + 1] = array[j];
             array[j] = temp;
         }
-        for (int k = 0; k <= size; k++)
+        for (int k = 0; k < size; k++)
         {
             printf("%d ", array[k]);
         }
