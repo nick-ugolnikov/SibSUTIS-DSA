@@ -15,10 +15,29 @@ void ISort(int32_t *array, int size)
             array[j + 1] = array[j];
             array[j] = temp;
         }
-        for (int k = 0; k < size; k++)
-        {
-            printf("%d ", array[k]);
-        }
-    	printf("\n");
     }
 }
+
+void QuickSort(int32_t *array, int left, int right)
+{
+  int pivot, tmp;
+  int i = left, j = right;
+  pivot = array[(i + j) / 2];
+  do
+  {
+    while (array[i]<pivot) i++;
+    while (array[j]>pivot) j--;
+    if (i<=j)
+    {
+      tmp = array[i];
+      array[i] = array[j];
+      array[j] = tmp;
+      i++;
+      j--;
+    }
+  }
+  while (i < j);
+  if (left < j) QuickSort(array, left, j);
+  if (i < right) QuickSort(array, i, right);
+}
+

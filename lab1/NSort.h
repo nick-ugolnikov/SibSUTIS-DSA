@@ -3,4 +3,6 @@
 
 void ISort();
 
+void QuickSort();
+
 #endif
