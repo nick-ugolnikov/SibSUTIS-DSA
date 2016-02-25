@@ -27,14 +27,20 @@ int main(int argc, char *argv[])
         }
         for (int i = 0; i < size; i++)
         {
-            array[i] = getrand(1, 100000);
+            array[i] = getrand(1, 10000);
         }
         switch (mode)
         {
             case 1:
             {
+                double t = wtime();
+                CountingSort(array, size);
+                t = wtime() - t;
                 ptr = fopen("CountingSort.dat", "a");
-                fprintf(stderr, "%s\n", );
+                fprintf(ptr, "%d\t%0.6f\n", size, t);
+                fclose(ptr);
+                free(array);
+                break;
 
             }
             case 2:

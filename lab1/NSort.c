@@ -1,6 +1,39 @@
 #include "NSort.h"
 #include <stdint.h>
 #include <stdio.h>
+#include <stdlib.h>
+
+void CountingSort(int32_t *array, int size)
+{
+  int32_t *count = (int32_t*) malloc (size * sizeof(int32_t));
+  
+  if (array == NULL)
+  {
+    printf("Error of memory allocation!\n");
+    return EXIT_FAILURE;
+  }
+  
+  for (int i = 0; i < size; i++)
+  {
+    count[i] = 0;
+  }
+  
+  for (int i = 0; i < size; i++)
+  {
+    count[array[i]] += 1;
+  }
+  
+  int x = 0;
+  for (int i = 0; i < size; i++)
+  {
+    for (int j = 0; j < count[i]; j++)
+    {
+      array[x] = i;
+      x++;
+    }
+  }
+  free(count);
+}
 
 void ISort(int32_t *array, int size)
 {
