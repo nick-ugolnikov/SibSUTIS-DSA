@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
     size = 50000;
     FILE * ptr;
     //while (size <= 1000000)
-    while (size <= 100000)
+    while (size <= 1000000)
     {
         int32_t *array = (int32_t*) malloc(size * sizeof(int32_t));
         if (array == NULL)
@@ -32,6 +32,11 @@ int main(int argc, char *argv[])
         switch (mode)
         {
             case 1:
+            {
+                ptr = fopen("CountingSort.dat", "a");
+                fprintf(stderr, "%s\n", );
+
+            }
             case 2:
             {
                 double t = wtime();
