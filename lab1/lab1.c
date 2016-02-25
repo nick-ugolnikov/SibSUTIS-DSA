@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
     //while (size <= 1000000)
     while (size <= 1000000)
     {
-        int32_t *array = (int32_t*) malloc(size * sizeof(int32_t));
+        uint32_t *array = (uint32_t*) malloc(size * sizeof(int32_t));
         if (array == NULL)
         {
             printf("Error of memory allocation!\n");
