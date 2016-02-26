@@ -8,17 +8,21 @@ int i, size, mode;
 
 int main(int argc, char *argv[])
 {
+    //Reading a command line argument
     if (argc < 2)
     {
         printf("There's no arguments!\n");
         return EXIT_FAILURE;
     }
     mode = atoi (argv[1]);
+
     size = 50000;
     FILE * ptr;
-    //while (size <= 1000000)
+
+    //Sorting tests
     while (size <= 1000000)
     {
+        //Initionalization of random array
         uint32_t *array = (uint32_t*) malloc(size * sizeof(int32_t));
         if (array == NULL)
         {
@@ -29,10 +33,13 @@ int main(int argc, char *argv[])
         {
             array[i] = getrand(1, 10000);
         }
+
+        //Selection of sorting algorithm
         switch (mode)
         {
             case 1:
             {
+                //Counting Sort
                 double t = wtime();
                 CountingSort(array, size);
                 t = wtime() - t;
@@ -45,6 +52,7 @@ int main(int argc, char *argv[])
             }
             case 2:
             {
+                //Insertion Sort
                 double t = wtime();
                 ISort(array, size);
                 t = wtime() - t;
@@ -56,6 +64,7 @@ int main(int argc, char *argv[])
             }
             case 3:
             {
+                //Quick Sort
                 double t = wtime();
                 QuickSort(array, 0, size - 1);
                 t = wtime() - t;

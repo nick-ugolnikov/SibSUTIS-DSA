@@ -3,7 +3,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void CountingSort(uint32_t *array, int size)
+//Release of sorting alorithmes
+
+void CountingSort(uint32_t *array, int size) // Counting Sort
 {
   uint32_t *count = (uint32_t*) malloc (size * sizeof(uint32_t));
   
@@ -35,7 +37,7 @@ void CountingSort(uint32_t *array, int size)
   free(count);
 }
 
-void ISort(uint32_t *array, int size)
+void ISort(uint32_t *array, int size) // Insertion Sort
 {
 	for (int i = 1; i < size; i++)
     {
@@ -51,7 +53,7 @@ void ISort(uint32_t *array, int size)
     }
 }
 
-void QuickSort(uint32_t *array, int left, int right)
+void QuickSort(uint32_t *array, int left, int right) // Quick Sort
 {
   int pivot, tmp;
   int i = left, j = right;

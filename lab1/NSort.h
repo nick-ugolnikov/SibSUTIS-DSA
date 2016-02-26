@@ -1,10 +1,12 @@
 #ifndef NSORT
 #define NSORT
 
-void ISort();
+//Sorting algorithmes
 
-void QuickSort();
+void ISort(); //Insertion Sort
 
-void CountingSort();
+void QuickSort(); //Quick Sort
+
+void CountingSort(); //Counting Sort
 
 #endif

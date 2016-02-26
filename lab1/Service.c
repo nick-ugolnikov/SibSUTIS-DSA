@@ -2,12 +2,12 @@
 #include <stdlib.h>
 #include <sys/time.h>
 
-int getrand(int min, int max)
+int getrand(int min, int max) //Random function
 {
     return (double)rand() / (RAND_MAX + 1.0) * (max - min) + min;
 }
 
-double wtime()
+double wtime() //Time generator
 {
     struct timeval t;
     gettimeofday(&t, NULL);
