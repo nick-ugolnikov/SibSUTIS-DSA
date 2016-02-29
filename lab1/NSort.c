@@ -8,8 +8,9 @@
 void CountingSort(uint32_t *array, int size) // Counting Sort
 {
     uint32_t *count = (uint32_t *)malloc (size * sizeof(uint32_t));
+    uint32_t *arraycopy = (uint32_t *)malloc (size * sizeof(uint32_t));
   
-    if (array == NULL)
+    if (count == NULL || arraycopy == NULL)
     {
         printf("Error of memory allocation!\n");
         return EXIT_FAILURE;
@@ -30,11 +31,12 @@ void CountingSort(uint32_t *array, int size) // Counting Sort
     {
         for (int j = 0; j < count[i]; j++)
         {
-            array[x] = i;
+            arraycopy[x] = i;
             x++;
         }
     }
     free(count);
+    free(arraycopy);
 }
 
 void ISort(uint32_t *array, int size) // Insertion Sort
