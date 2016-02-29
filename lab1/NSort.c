@@ -7,8 +7,8 @@
 
 void CountingSort(uint32_t *array, int size) // Counting Sort
 {
-    uint32_t *count = (uint32_t *)malloc (size * sizeof(uint32_t));
-    uint32_t *arraycopy = (uint32_t *)malloc (size * sizeof(uint32_t));
+    uint32_t *count = (uint32_t *)malloc(size * sizeof(uint32_t));
+    uint32_t *arraycopy = (uint32_t *)malloc(size * sizeof(uint32_t));
   
     if (count == NULL || arraycopy == NULL)
     {
