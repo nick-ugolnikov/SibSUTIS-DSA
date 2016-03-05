@@ -1,5 +1,5 @@
 ##Instructions
-Run this program with with a command line argument:
+Run this program with a command line argument:
 * "1" - CountingSort
 * "2" - InsertionSort
 * "3" - QuickSort
