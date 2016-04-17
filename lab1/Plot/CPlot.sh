@@ -1,5 +1,5 @@
 #!/usr/bin/gnuplot
-set terminal png size 1200,720 enhanced font 'Arial, 18'
+set terminal png size 800,480 enhanced font 'Arial, 18'
 set output 'CResult.png'
 
 set style line 1 linecolor rgb 'red' linetype 1 linewidth 2
