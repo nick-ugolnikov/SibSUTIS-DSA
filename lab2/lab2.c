@@ -48,7 +48,7 @@ int main(int argc, char *argv[])
 			for (i = 0; i < N; i++) 
 			{
 				fscanf(input_unsort, "%s\n",text[i]);
-				//printf ("buf(%d): %s\n", i+1, text[i]);
+				printf ("buf(%d): %s\n", i+1, text[i]);
 			}
 			
 			//binary search tree
@@ -159,6 +159,11 @@ int main(int argc, char *argv[])
 			
 			break;
 		case 6: //Experiment #6
+			for (i = 0; i < N; i++) 
+			{
+				fscanf(input_unsort, "%s\n",text[i]);
+				//printf ("buf(%d): %s\n", i+1, text[i]);
+			}
 			//KP hash
 			output_ht = fopen("time6_KP.dat", "w");
 			if (output_ht == NULL)
@@ -173,6 +178,7 @@ int main(int argc, char *argv[])
 			while (i < N)
 			{
 				hashtab_add(tisch_6, text[i - 1], i);
+				//printf("%s hashtab[%d] = %d\n", text[i-1], hash(text[i - 1]), i);
 				if (i % 10000 == 0)
 				{
 					kp_collision = collision(tisch_6);
