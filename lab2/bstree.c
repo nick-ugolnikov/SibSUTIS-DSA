@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-struct bstree *bstree_create(char *key, int value);
+struct bstree *bstree_create(char *key, int value)
 {
 	struct bstree *node = malloc(sizeof(*node));
 	if (node != NULL)
@@ -89,26 +89,4 @@ struct bstree *bstree_max(struct bstree *tree)
 		tree = tree->right;
 	}
 	return tree;
-}
-
-/*
-	string compare:
-	return 1, if str1 > str2,
-	return -1, if str1 < str2,
-	return 0, if str1 and str2 are equal
-*/
-short int scmp(char *str1, char *str2)
-{
-	int i;
-	short int flg = 0;
-	for(i=0; (str1[i]==str2[i]) && str1[i]!='\0' && str2[i]!='\0'; i++);
-	if(str1[i] < str2[i]) 
-	{
-		flg = -1;
-	}
-	else if (str1[i] > str2[i])
-	{
-		flg = 1;
-	}
-	return flg;
 }

@@ -11,6 +11,8 @@ struct bstree
 
 struct bstree *bstree_create(char *key, int value);
 
+void bstree_delete(struct bstree *root);
+
 void bstree_add(struct bstree *tree, char *key, int value);
 
 struct bstree *bstree_lookup(struct bstree *tree, char *key);
