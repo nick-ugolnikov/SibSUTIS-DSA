@@ -69,7 +69,7 @@ int main(int argc, char *argv[])
 					t = wtime();
 					struct bstree *node = bstree_lookup(baum_1, w);
 					t = wtime() - t;
-					fprintf(output_bs, "%d\t%0.6f\n", i, t);
+					fprintf(output_bs, "%d\t%0.9f\n", i, t);
 				}
 				i++;
 			}
@@ -93,7 +93,7 @@ int main(int argc, char *argv[])
 					t = wtime();
 					struct listnode *node = hashtab_lookup(tisch_1, w);
 					t = wtime() - t;
-					fprintf(output_ht, "%d\t%0.6f\n", i, t);
+					fprintf(output_ht, "%d\t%0.9f\n", i, t);
 				}
 				i++;
 			}			
@@ -123,7 +123,7 @@ int main(int argc, char *argv[])
 					t = wtime();
 					struct bstree *node = bstree_min(baum_4);
 					t = wtime() - t;
-					fprintf(output_bs, "%d\t%0.6f\n", i, t);
+					fprintf(output_bs, "%d\t%0.9f\n", i, t);
 				}
 				i++;
 			}		
@@ -151,7 +151,7 @@ int main(int argc, char *argv[])
 					t = wtime();
 					struct bstree *node = bstree_min(baum_4a);
 					t = wtime() - t;
-					fprintf(output_bs, "%d\t%0.6f\n", i, t);
+					fprintf(output_bs, "%d\t%0.9f\n", i, t);
 				}
 				i++;
 			}		
@@ -186,7 +186,7 @@ int main(int argc, char *argv[])
 					t = wtime();
 					struct listnode *node = hashtab_lookup(tisch_6, w);
 					t = wtime() - t;
-					fprintf(output_ht, "%d\t%0.6f\t%d\n", i, t, kp_collision);
+					fprintf(output_ht, "%d\t%0.9f\t%d\n", i, t, kp_collision);
 				}
 				i++;
 			}
@@ -213,7 +213,7 @@ int main(int argc, char *argv[])
 					t = wtime();
 					struct listnode *node = hashtab_lookup(tisch_7, w);
 					t = wtime() - t;
-					fprintf(output_bs, "%d\t%0.6f\t%d\n", i, t, fnv_collision);
+					fprintf(output_bs, "%d\t%0.9f\t%d\n", i, t, fnv_collision);
 				}
 				i++;
 			}
