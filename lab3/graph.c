@@ -60,9 +60,10 @@ struct graph_map *Search_Shortest_Path(struct graph *g, int src, int dest)
     
     p->len = d[dest];
     int length = 0;
-    while (i != src) {
-	i = prev[i];
-	length++;
+    while (i != src) 
+    {
+	   i = prev[i];
+	   length++;
     }
     p->edge = length;
     
@@ -70,10 +71,11 @@ struct graph_map *Search_Shortest_Path(struct graph *g, int src, int dest)
     i = dest;
     int j = length;
     
-    while(i != src) {
-	p->path[j] = i;
-	i = prev[i];
-	j--;
+    while(i != src) 
+    {
+	   p->path[j] = i;
+	   i = prev[i];
+	   j--;
     }
     p->path[j] = src;
     free(prev);
